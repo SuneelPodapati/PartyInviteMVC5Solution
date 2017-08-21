@@ -1,0 +1,17 @@
+﻿@model PartyInviteMVC5WebApp.Models.GuestResponse
+
+@{
+    ViewBag.Title = "Thanks";
+    var fullName = Model.FirstName + ". " + Model.LastName;
+}
+
+<h2>Thanks, @fullName !!!</h2>
+@if (Model.WillAttend == true)
+{
+    @:It's great to have you at the party.
+}
+else
+{
+    @:Sorry to hear that you can't make it, Thanks for letting us know.
+}
+
