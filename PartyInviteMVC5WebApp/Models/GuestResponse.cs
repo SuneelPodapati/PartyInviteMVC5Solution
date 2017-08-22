@@ -11,6 +11,7 @@ namespace PartyInviteMVC5WebApp.Models
 
         [Display(Name = "Last Name")]
         //[Required(ErrorMessage = "Last Name cannot be null or empty")]
+        [MaxWords(1)]
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Phone cannot be empty")]

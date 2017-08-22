@@ -44,11 +44,18 @@ namespace PartyInviteMVC5WebApp.Controllers
         }
 
         #endregion
-        public ContentResult List()
+        public ContentResult ContentList()
+        {
+            var result = "<div style='background-color:cornflowerblue; text-align:center; Color: White;'><h1>This is a ContentResult</h1></div>";
+            return Content(result);
+        }
+
+        public JsonResult List()
         {
             var result = Json(new { Name = "Phantom", Email = "phantom@p.com", Mobile = "1212121" });
-            return Content(result.ToString());
+            return Json(result, JsonRequestBehavior.AllowGet);
         }
+
 
         public string Greeting()
         {
